@@ -51,21 +51,28 @@ def binomial(n, k):
 
 
 def primeFactors(n):
-    factors = list()
-    for i in range(2, n):
-        while n % i == 0:
-            factors.append(i)
-            n /= i
-    return factors
+    res = list()
+    # iterate over all even numbers first.
+    while n % 2 == 0:
+        res.append(2)
+        n //= 2
+    # try odd numbers up to sqrt(n)
+    limit = sqrt(n + 1)
+    i = 3
+    while i <= limit:
+        if n % i == 0:
+            res.append(i)
+            n //= i
+            limit = sqrt(n + i)
+        else:
+            i += 2
+    if n != 1:
+        res.append(n)
+    return res
 
 
 def distinctPrimeFactors(n):
-    factors = set()
-    for i in range(2, n):
-        while n % i == 0:
-            factors.add(i)
-            n /= i
-    return factors
+    return set(primeFactors(n))
 
 
 def isEven(n):
