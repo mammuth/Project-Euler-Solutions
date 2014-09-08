@@ -4,24 +4,7 @@
 # kontakt@maxi-muth.de
 
 from math import *
-
-
-def isPrime(n):
-    """
-    Checks whtere n is prime.
-    """
-    if n <= 1:
-        return False
-    if n == 2:
-        return True
-    if n % 2 == 0:
-        return False
-
-    for i in range(3, sqrt(n), 2):
-        if n % i == 0:
-            return False
-
-    return True
+import itertools
 
 
 def primes(n):
@@ -75,6 +58,29 @@ def distinctPrimeFactors(n):
     return set(primeFactors(n))
 
 
+"""
+Checking for Being :-)
+"""
+
+
+def isPrime(n):
+    """
+    Checks whtere n is prime.
+    """
+    if n <= 1:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+
+    for i in range(3, sqrt(n), 2):
+        if n % i == 0:
+            return False
+
+    return True
+
+
 def isEven(n):
     return n % 2 == 0
 
@@ -94,6 +100,23 @@ def fibonacci(n):
     """
     return int(((1 + sqrt(5)) ** n - (1 - sqrt(5)) ** n) / (2 ** n * sqrt(5)))
 
+
+def permutations(seq):
+    """
+    In: Anything
+    Out: list of Strings !
+
+    Contains seq aswell !
+    """
+    return list(map("".join, itertools.permutations(str(seq))))
+
+
+def reverseInt(n):
+    return int(reverseString(str(n)))
+
+
+def reverseString(s):
+    return s[::-1]
 
 def pentagonal(n):
     """
