@@ -118,6 +118,9 @@ def reverseInt(n):
 def reverseString(s):
     return s[::-1]
 
+def concatList(l):
+    [i for sub in l for i in sub]
+
 def pentagonal(n):
     """
     Returns the n-th pentagonal number.
