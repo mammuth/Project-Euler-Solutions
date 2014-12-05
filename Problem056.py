@@ -7,8 +7,8 @@ maxSum = 0
 
 for a in range(2, 100):
     for b in range(2, 100):
-        digitSum = sum(int(digit) for digit in str(a**b))
+        digitSum = sum(int(digit) for digit in str(a ** b))
         if digitSum > maxSum:
-            maxSum= digitSum
+            maxSum = digitSum
 
 print(maxSum)
