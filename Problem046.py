@@ -5,7 +5,7 @@
 
 from itertools import product
 
-from EulerLibrary import *
+from euler_helper import *
 
 
 primes = primes(10000)

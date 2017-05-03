@@ -8,7 +8,7 @@
 from itertools import *
 from operator import *
 
-from EulerLibrary import *
+from euler_helper import *
 
 
 pentagonals = set(pentagonal(n) for n in range(1, 3000))

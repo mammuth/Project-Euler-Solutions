@@ -3,7 +3,7 @@
 # Created by Max Muth on 31. August 2014
 # kontakt@maxi-muth.de
 
-from EulerLibrary import pentagonal, triangle, hexagonal
+from euler_helper import pentagonal, triangle, hexagonal
 
 p = set(pentagonal(n) for n in range(1, 100000))
 h = set(hexagonal(n) for n in range(1, 100000))

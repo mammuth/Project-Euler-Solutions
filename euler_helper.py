@@ -89,6 +89,30 @@ def isOdd(n):
     return n % 2 != 0
 
 
+def is_palindrome(i):
+    """
+    :param i: String or integer 
+    :return: whether i is an palindrome
+    """
+    return str(i) == str(i)[::-1]
+
+
+def is_lychrel(number, max_iterations=50):
+    """
+    A number that never forms a palindrome through the reverse and add process is called a Lychrel number.
+    10677 is the first number to be shown to require over fifty iterations before producing a palindrome: 
+    4668731596684224866951378664 (53 iterations, 28-digits).
+    """
+    num = number
+    for _ in range(max_iterations):
+        num = num + int(str(num)[::-1])
+        if is_palindrome(num):
+            return Falsel
+
+    return True
+
+
+
 """
 Special Numbers / Sequences
 """

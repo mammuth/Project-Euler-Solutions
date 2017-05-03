@@ -15,14 +15,14 @@
 # What 12-digit number do you form by concatenating the three terms
 # in this sequence?
 
-import EulerLibrary
+import euler_helper
 
 
 def main():
-    primes = list(p for p in EulerLibrary.primes(10000) if len(str(p)) == 4)
+    primes = list(p for p in euler_helper.primes(10000) if len(str(p)) == 4)
 
     for p in primes:
-        perm = (int(s) for s in EulerLibrary.permutations(p))
+        perm = (int(s) for s in euler_helper.permutations(p))
         result = list()
         for i in range(0, 3):
             if p != 1487 and p + i * 3330 in perm and p + i * 3330 in primes:

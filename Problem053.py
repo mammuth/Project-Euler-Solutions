@@ -7,6 +7,6 @@
 How many, not necessarily distinct, values of  nCr, for 1 ≤ n ≤ 100, are greater than one-million?
 '''
 
-from EulerLibrary import *
+from euler_helper import *
 
 print(len([1 for n in range(22, 101) for r in range(1, n) if binomial(n, r) > 1000000]))

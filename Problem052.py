@@ -4,7 +4,7 @@
 # kontakt@maxi-muth.de
 
 
-from EulerLibrary import *
+from euler_helper import *
 
 for x in range(1, 10000000):
     perms = permutations(x)
