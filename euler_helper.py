@@ -107,7 +107,7 @@ def is_lychrel(number, max_iterations=50):
     for _ in range(max_iterations):
         num = num + int(str(num)[::-1])
         if is_palindrome(num):
-            return Falsel
+            return False
 
     return True
 
